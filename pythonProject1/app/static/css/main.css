@@ -1,0 +1,37 @@
+input[type=submit] {
+    align-self: start;
+    max-width: 15em;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /display: inline-block;/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #377ba8;
+  }
+
+  .button {
+      width: 250px;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /display: inline-block;/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #377ba8;
+  }
+
+  input[type=submit]:hover {background-color: #1d58c5}
+
+  input[type=submit]:active {
+    background-color: #1d58c5;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

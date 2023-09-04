@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Добро пожаловать {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+<center> <div class="imgbox">
+    <img class="center-fit" src='https://i.pinimg.com/originals/cc/67/8f/cc678f30bc0ea3ee2f97a5285f139caf.jpg'>
+</div> </center>
+{% endblock %}
+

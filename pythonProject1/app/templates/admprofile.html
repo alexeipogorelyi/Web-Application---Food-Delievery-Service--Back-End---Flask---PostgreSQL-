@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1>Администрирование</h1>
+<form action="" method="post">
+    {{form.hidden_tag()}}
+        <p>{{ form.checkadm() }} {{ form.checkadm.label }}</p>
+    <p>
+            {{ form.admpassword.label }}<br>
+            {{ form.admpassword(size=32) }}
+            {% for error in form.admpassword.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+    <p>{{form.submit}}</p>
+</form>
+{%endblock%}

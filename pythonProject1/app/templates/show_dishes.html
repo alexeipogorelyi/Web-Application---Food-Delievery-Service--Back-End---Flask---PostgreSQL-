@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for d in dishes %}
+        <div>
+            <table>
+            <tr>
+                <th>Название блюда</th>
+                <td>{{d.NameDish}}</td>
+            </tr>
+            <tr>
+                <th>Описание</th>
+                <td>{{d.DescDish}}</td>
+            </tr>
+            <tr>
+                <th>Калорийность</th>
+                <td>{{d.KcalDish}}</td>
+            </tr>
+                </table>
+        </div> <br><br>
+    {% endfor %}
+{% endblock %}

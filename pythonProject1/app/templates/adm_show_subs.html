@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for s in subs %}
+        <div>
+            <table>
+            <tr>
+                <th><i>Название подписки</i></th>
+                <td>{{s.NameSub}}</td>
+            </tr>
+            <tr>
+                <th><i>Описание</i></th>
+                <td>{{s.DescSub}}</td>
+            </tr>
+            <tr>
+                <form method="post">
+                <th colspan="2">
+                        <input type="submit" name={{s.idSub}} value="Удаление подписки"/>
+                </th>
+                <th>
+                        <input type="hidden" name=subid value={{s.idSub}}>
+                </th>
+                 </form>
+            </tr>
+            </table>
+        </div> <br>
+    {% endfor %}
+{% endblock %}

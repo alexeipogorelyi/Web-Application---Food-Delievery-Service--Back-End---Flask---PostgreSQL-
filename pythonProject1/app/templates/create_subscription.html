@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Добавить подписку</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.NameSub.label }}<br>
+            {{ form.NameSub(size=32) }}<br>
+            {% for error in form.NameSub.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.DescSub.label }}<br>
+            {{ form.DescSub(cols=50, rows=4) }}<br>
+            {% for error in form.DescSub.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.PriceSub.label }}<br>
+            {{ form.PriceSub(cols=50, rows=4) }}<br>
+            {% for error in form.PriceSub.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

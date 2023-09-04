@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for d in dishes %}
+        <div>
+            <table>
+            <tr>
+                <th><i>Название блюда</i></th>
+                <td>{{d.NameDish}}</td>
+            </tr>
+            <tr>
+                <th><i>Описание</i></th>
+                <td>{{d.DescDish}}</td>
+            </tr>
+            <tr>
+                <form method="post">
+                <th colspan="2">
+                        <input type="submit" name={{d.idDish}} value="Удаление блюда"/>
+                </th>
+                <th>
+                        <input type="hidden" name=dishid value={{d.idDish}}>
+                </th>
+                 </form>
+            </tr>
+            </table>
+        </div> <br>
+    {% endfor %}
+{% endblock %}

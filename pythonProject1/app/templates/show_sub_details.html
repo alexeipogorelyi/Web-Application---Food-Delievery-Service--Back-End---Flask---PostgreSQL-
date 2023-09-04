@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <table>
+                <tr>
+                <th colspan="3"><i>Подписка</i></th>
+                <td colspan="3">{{subname}}</td>
+                </tr>
+                <form method="post">
+                <tr>
+                        <th>
+                        <input type="submit" name={{subname}} value="Подписаться"/>
+                        </th>
+                        <th>
+                        <input type="hidden" name=subid value={{subname}}>
+                        </th>
+                </tr>
+                <tr>
+                        <td>
+                        <label for="summator">Количество недель</label>
+                        </td>
+                        <th>
+                        <input type="text" name="summator" id="summator" onchange="var text = this.value;">
+                        </th>
+                        <td>
+                        <label for="odate">Выберите дату начала</label>
+                        </td>
+                        <td>
+                        <input type="date" name="odate" id="odate" onchange="var val = new Date(this.value); val.setDate(val.getDate()+7*document.getElementById('summator').value); var futureDate = val.getFullYear()+'-'+('0'+(val.getMonth()+1)).slice(-2)+'-'+('0'+(val.getDate())).slice(-2); document.getElementById('cdate').value=futureDate;" />
+                        </td>
+                </tr>
+                <tr>
+                        <td>
+                        </td>
+                        <th>
+                        </th>
+                        <td><label for="cdate">Дата окончания</label></td>
+                        <td><input type="date" name="cdate" id="cdate" value=futureDate disabled></td>
+                </tr>
+                </form>
+        </table><br><br>
+        {% for m in menus %}
+        <div>
+        <table>
+        <tr>
+                <th>Меню</th>
+                <td>{{m}}</td>
+        </tr>
+        <tr>
+                <th></th>
+                {% for day in days %}
+                <th>{{day.idDay}}</th>
+                {% endfor %}
+        </tr>
+        {% for eat in eats %}
+        <tr>
+                <th>{{eat.idEat}}</th>
+                {% for eatd in eatdict[eat.idEat] %}
+                <td>{{eatd.dish}}</td>
+                {% endfor %}
+        </tr>
+        {% endfor %}
+        </table></div> <br><br>
+        {% endfor %}
+{% endblock %}

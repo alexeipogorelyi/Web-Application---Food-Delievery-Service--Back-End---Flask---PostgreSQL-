@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for s in subs %}
+        <div>
+            <table>
+            <tr>
+                <th colspan="2"><i>Подписка №{{s.idActSub}}</i></th>
+            </tr>
+            <tr>
+                <th>Атрибут</th>
+                <th>Значение</th>
+            </tr>
+            <tr>
+                <td>Название подписки</td>
+                <td>{{subnames[s.idActSub][0]}}</td>
+            </tr>
+                <tr>
+                <td>Дата начала подписки</td>
+                <td><input type="date" name="odate" id="odate" value={{s.StartAct}} disabled></td>
+            </tr>
+                <tr>
+                <td>Дата окончания подписки</td>
+                <td><input type="date" name="cdate" id="cdate" value={{s.EndAct}} disabled></td>
+            </tr>
+            <tr>
+                <td>Описание подписки</td>
+                <td>{{subnames[s.idActSub][1]}}</td>
+            </tr>
+            <tr>
+                <td>Калорийность</td>
+                <td>{{subnames[s.idActSub][2]}} ккал</td>
+            </tr>
+            <tr>
+                <td>Цена</td>
+                <td>{{s.PriceSub}} р</td>
+            </tr>
+            <tr>
+                <th colspan="2">Входящие меню:</th>
+            </tr>
+                {% for m in menus[s.idActSub] %}
+            <tr>
+                <td colspan="2">{{m}}</td>
+            </tr>
+                {% endfor %}
+                </table>
+        </div> <br><br>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for m in menus %}
+        <div>
+            <table>
+            <tr>
+                <th><i>Название меню</i></th>
+                <td>{{m}}</td>
+            </tr>
+            <tr>
+                <form method="post">
+                <th colspan="2">
+                        <input type="submit" name={{m}} value="Удаление меню"/>
+                </th>
+                <th>
+                        <input type="hidden" name=menid value={{m}}>
+                </th>
+                 </form>
+            </tr>
+            </table>
+        </div> <br>
+    {% endfor %}
+{% endblock %}

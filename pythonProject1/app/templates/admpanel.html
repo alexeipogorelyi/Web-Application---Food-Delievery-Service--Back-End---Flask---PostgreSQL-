@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1>Администрирование</h1>
+     <form action="/create_dish">
+            <input type="submit" name="submit1" value="Создание блюда" />
+            </form>
+     <form action="/create_menu">
+            <input type="submit" name="submit2" value="Создание меню" />
+            </form>
+    <form action="/create_subscription">
+            <input type="submit" name="submit3" value="Создание подписки" />
+            </form>
+    <form action="/adm_show_menus">
+            <input type="submit" name="submit4" value="Созданные меню" />
+            </form>
+    <form action="/adm_show_dishes">
+            <input type="submit" name="submit5" value="Созданные блюда" />
+            </form>
+    <form action="/adm_show_subs">
+            <input type="submit" name="submit6" value="Созданные подписки" />
+            </form>
+{%endblock%}

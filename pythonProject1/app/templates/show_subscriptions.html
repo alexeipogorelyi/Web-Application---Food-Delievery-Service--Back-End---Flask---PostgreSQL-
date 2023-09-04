@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for s in subs %}
+        <div>
+            <table>
+            <tr>
+                <th colspan="2"><i>Подписка №{{s.idSub}}</i></th>
+            </tr>
+            <tr>
+                <th>Атрибут</th>
+                <th>Значение</th>
+                <form method="post">
+                <th>
+                        <input type="submit" name={{s.idSub}} value="Просмотр подписки"/>
+                </th>
+                <th>
+                        <input type="hidden" name=subid value={{s.idSub}}>
+                </th>
+                 </form>
+            </tr>
+            <tr>
+                <td>Название подписки</td>
+                <td>{{s.NameSub}}</td>
+            </tr>
+            <tr>
+                <td>Описание подписки</td>
+                <td>{{s.DescSub}}</td>
+            </tr>
+            <tr>
+                <td>Калорийность</td>
+                <td>{{s.KcalSub}} ккал</td>
+            </tr>
+            <tr>
+                <td>Цена</td>
+                <td>{{s.PriceSub}} р</td>
+            </tr>
+            <tr>
+                <th colspan="2">Входящие меню:</th>
+            </tr>
+                {% for m in menus[s.idSub] %}
+            <tr>
+                <td colspan="2">{{m}}</td>
+            </tr>
+                {% endfor %}
+                </table>
+        </div> <br><br>
+    {% endfor %}
+{% endblock %}

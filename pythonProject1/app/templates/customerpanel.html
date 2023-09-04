@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1>Панель покупателя</h1>
+<table>
+     <tr>
+         <td><form action="/show_subscriptions">
+            <input type="submit" name="submit1" value="Доступные подписки" />
+            </form></td>
+         <td colspan="2">       </td>
+        <td><form action="/show_user_subscriptions">
+            <input type="submit" name="submit2" value="Текущие подписки" />
+            </form></td>
+     </tr>
+     <tr><td><form action="/show_dishes">
+            <input type="submit" name="submit3" value="Просмотр блюд" />
+            </form></td>
+    </tr>
+</table>
+{%endblock%}

@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Создание меню{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+<form method="post">
+    <table>
+        <tr>
+                <th colspan="10">
+                    <select name="subs">
+                    {% for s in subs %}
+                    <option value="{{s.NameSub}}">{{s.NameSub}}</option>
+                    {% endfor %}
+                    </select>
+                </th>
+                <th colspan="2">
+                    Название меню
+                </th>
+                <th colspan="2">
+                     <input type="text" name="menu_name">
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+                <th colspan="2">Понедельник</th>
+                <th colspan="2">Вторник</th>
+                <th colspan="2">Среда</th>
+                <th colspan="2">Четверг</th>
+                <th colspan="2">Пятница</th>
+                <th colspan="2">Суббота</th>
+                <th colspan="2">Воскресенье</th>
+            </tr>
+            <tr>
+                <th colspan="2">Первый прием</th>
+                <td colspan="2">
+                    <select name="mon_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thu_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="wen_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thir_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="fri_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="sat_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="sun_dish1">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+            </tr>
+        <tr>
+                <th colspan="2">Второй прием</th>
+                <td colspan="2">
+                    <select name="mon_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thu_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="wen_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thir_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="fri_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="sat_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="sun_dish2">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+            </tr>
+        <tr>
+                <th colspan="2">Третий прием</th>
+                <td colspan="2">
+                    <select name="mon_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thu_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="wen_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thir_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="fri_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="sat_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="sun_dish3">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+            </tr>
+        <tr>
+                <th colspan="2">Четвертый прием</th>
+                <td colspan="2">
+                    <select name="mon_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thu_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="wen_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thir_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="fri_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="sat_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="sun_dish4">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+            </tr>
+        <tr>
+                <th colspan="2">Пятый прием</th>
+                <td colspan="2">
+                    <select name="mon_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thu_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="wen_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="thir_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="fri_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+               <td colspan="2">
+                    <select name="sat_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="sun_dish5">
+                    {% for d in dishes %}
+                    <option value="{{d.NameDish}}">{{d.NameDish}}</option>
+                    {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="4" rowspan="2"><input type="submit" name="submit_button" value="Create"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+            </table>
+    </form>
+{% endblock %}
